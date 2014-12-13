@@ -8,7 +8,7 @@ type User struct {
 	Id          int64  `orm:"auto;pk"`
 	Login       string `orm:"size(64);unique;index"` //登录帐号
 	Password    string
-	Email       string    `orm:"unique;index;null"` //邮箱
+	Email       string    `orm:"index;null"` //邮箱
 	Gender      string    `orm:"size(10);null"`
 	Birth       time.Time `orm:"type(datetime);null"`
 	GravatarId  string    `orm:"size(64);null"`
